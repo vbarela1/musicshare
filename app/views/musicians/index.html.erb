@@ -1,0 +1,28 @@
+<h1>Musicians</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Musician</th>
+      <th>Albums</th>
+      <th>Comments</th>
+      <th colspan='2'></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @musicians.each do |musician| %>
+      <tr>
+        <td><%= musician.name %></td>
+        <td><%= musician.albums %></td>
+        <td><%= musican.comments %></td>
+        <td><%= link_to 'Show', musician %></td>
+        <td><%= link_to 'Edit', musician %></td>
+        <td><%= link_to 'Delete', musician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+
+<%= link_to 'New Musician', new_musician_path %>
