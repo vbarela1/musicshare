@@ -42,7 +42,7 @@ class MusiciansController < ApplicationController
 
 private
   def set_musician
-    @musician = Musician.find(params[:musician_id])
+    @musician = Musician.find(params[:id])
   end
 
   def musician_params
