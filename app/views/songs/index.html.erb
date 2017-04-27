@@ -1,2 +1,28 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1>Songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><%= song.title %></td>
+        <td><%= song.artist %></td>
+        <td><%= song.comments %></td>
+        <td><%= link_to 'Show', musician_song_path(@song), class:'btn grey white-text'%></td>
+        <td><%= link_to 'Edit', edit_song_path(@song), class:'btn grey white-text'%></td>
+        <td><%= link_to 'Delete', song, class:'btn grey white-text'%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Song', new_musician_song_path, class:'btn grey white-text'%></td>
