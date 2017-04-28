@@ -16,13 +16,12 @@
         <td><%= musician.name %></td>
         <td><%= musician.albums %></td>
         <td><%= musician.comments %></td>
-        <td><%= link_to 'Show', musician %></td>
-        <td><%= link_to 'Edit', musician %></td>
-        <td><%= link_to 'Delete', musician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', musician, class:'btn grey white-text'%></td>
+        <td><%= link_to 'Delete', musician, class:'btn grey white-text', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br />
 
-<%= link_to 'New Musician', new_musician_path %>
+<%= link_to 'New Musician', new_musician_path, class:'btn grey white-text'%>

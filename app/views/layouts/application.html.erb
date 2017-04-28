@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Musicshare</title>
+    <title>Music Share</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
+     <% flash.each do |type, message| %>
+     <div class = "flash <%= type %>">
+     <%= message %>
+     </div>
+     <% end %>
     <%= yield %>
   </body>
 </html>
